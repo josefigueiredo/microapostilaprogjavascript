@@ -1,0 +1,20 @@
+\documentclass[a4paper,11pt]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+% pacote babel ou equivalent
+\usepackage[portuguese]{babel}
+
+\title{Micro Apostila}
+\author{José de Figueiredo}
+\date{Agosto 2020}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\include{tex_files/fluxos}
+\include{tex_files/lacos}
+
+\end{document}
