@@ -18,6 +18,7 @@ Para trabalhar com repetição, é preciso compreender o básico das técnicas d
 
 % ============================================ WHILE ============================================ 
 \section{Laço While}
+\label{sec:while}
 A palavra while pode ser traduzida para enquanto.
 
 \emph{-> -> A instrução while executa um laço do tipo “enquanto-faça”   <- <-}
@@ -30,28 +31,27 @@ O fluxograma na Figura~\ref{fig:lacosimples} a seguir demonstra graficamente est
 
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[width=0.5\textwidth]{img/laco.png}
+    \includegraphics[width=0.5\textwidth]{img/laco-while.png}
     \caption{Fluxograma demonstrando um laço de repetição.}
     \label{fig:lacosimples}
   \end{center}
 \end{figure}
 
-
 Para demonstrar o uso desta estrutura de laço, apresentamos 3 exemplos simples. As soluções dos problemas serão demonstradas usando representação gráfica de fluxograma;  representação em Pseudocódigo; com Javascript e com Octave. 
 
-\subsection{Problema~\ref{problema1}}
-\label{problema1}
+\subsection{Problema~\ref{problema(while1)}}
+\label{problema(while1)}
 Escrever um algoritmo/programa para \emph{mostrar na tela os números de 1 até 10, usando repetição.}
 
-\subsubsection{Fluxograma para solução do problema~\ref{problema1}}
+\subsubsection{Fluxograma para solução do problema~\ref{problema(while1)}}
 A Figura~\ref{fig:problema1} mostra um algoritmo, que resolve este problema, representado em fluxograma. 
 
 Para resolver o problema criamos uma variável (i) com valor inicial 1; no losango representamos a verificação do laço, onde o algoritmo testa se a variávei i ainda é menor ou igual a 10; se i ainda é menor/igual a 10, o programa mostra o valor de i e faz com que a variável i receba o valor de i mais 1 (chamamos isso de incremento de variável). Caso o teste de i seja maior que 10, então o fluxo é desviado para o fim do programa.
 
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[width=0.5\linewidth]{img/problema1.png}
-    \caption{Fluxograma representando a solução do problema~\ref{problema1}.}
+    \includegraphics[width=0.5\linewidth]{img/problemaWhile1.png}
+    \caption{Fluxograma representando a solução do problema~\ref{problema(while1)}.}
     \label{fig:problema1}
   \end{center}
 \end{figure}
@@ -94,17 +94,17 @@ Observe que a estrutura de uso da instrução while é semelhante nas linguagens
 Escolha uma das linguagens e execute o trecho observando o teste que ocorre dentro do parênteses. Observe também o resultado se tirarmos o sinal de “=” o laço repete de 1 até 9.
 
 
-\subsection{Problema~\ref{problema2}}
-\label{problema2}
+\subsection{Problema~\ref{problema(while2)}}
+\label{problema(while2)}
 Escrever um algoritmo/programa que leia 25 números, calculando e mostrando a média aritmética.
 
-\subsubsection*{Fluxograma para solução do problema~\ref{problema2}}
-A Figura~\ref{fig:problema2} apresenta uma solução, na forma de fluxograma, para o problema~\ref{problema2}.
+\subsubsection*{Fluxograma para solução do problema~\ref{problema(while2)}}
+A Figura~\ref{fig:problema2} apresenta uma solução, na forma de fluxograma, para o problema~\ref{problema(while2)}.
 
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[width=0.5\linewidth]{img/problema2.png}
-    \caption{Fluxograma representando a solução para o problema 2.}
+    \includegraphics[width=0.5\linewidth]{img/problemaWhile2.png}
+    \caption{Fluxograma representando a solução para o~\ref{problema(while2)}.}
     \label{fig:problema2}
   \end{center}
 \end{figure}
@@ -128,12 +128,12 @@ Enquanto i for menor que 26, serão executados as instruções:
 
 Uma outra forma de fazer analisar este algoritmo é usando uma tabela. Para isso, vamos observar a Tabela~\ref{tab:testemesa1}. Para não ficar muito longa, a tabela foi dividida ao meio montada lado a lado. Observe que a primeira coluna esta apenas dizendo se o programa ainda está dentro do laço - ele fica dentro do laço até que i=26. Cada linha da tabela, \texttt{enquanto o programa está dentro do laço}, é chamada de iteração. Os números na coluna num foram gerados aleatoriamente, simulando números que o usuário digitou. 
 
-O valor na célula sum é obtido conforme a equação $sum = sum + num$, ou seja, \texttt{o valor nela é sempre dado pela soma de sum da linha anterior com o valor num da linha corrente}. 
+O valor na célula $sum$ é obtido conforme a equação $sum = sum + num$, ou seja, \texttt{o valor nela é sempre dado pela soma de sum da linha anterior com o valor num da linha corrente}. 
 
 Vamos ver a iteração em que i=4: ao iniciar esta iteração, o valor de sum é 23. O usuário digitou 7 e como $sum = sum + num$, ao final da iteração sum recebe a soma entre o valor que tinha antes (no inicio da iteração) com o valor que o usuário acabou de digitar.
 
 \begin{table}[h]
-\caption{Um teste de mesa para a solução do problema~\ref{problema2}.}
+\caption{Um teste de mesa para a solução do problema~\ref{problema(while2)}.}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
@@ -203,8 +203,8 @@ printf(" %d ",media)
 \end{code}
 
 
-\subsection*{Problema~\ref{problema3}}
-\label{problema3}
+\subsection*{Problema~\ref{problema(while3)}}
+\label{problema(while3)}
 Escrever um algoritmo/programa para ler um uma quantidade variável (que muda) de valores e apresentar a média aritmética. 
 
 Este problema poderia ser enunicado de outras formas, por exemplo:
@@ -215,12 +215,12 @@ Este problema poderia ser enunicado de outras formas, por exemplo:
 
 Para criar a solução para este problema é preciso compreender que cada vez que o programa executar, poderemos ler uma quantidade de valores diferentes. Por exemplo: usando o  mesmo programa quero fazer a média de notas da turma X (que tem 10 alunos) e em outro momento, quero fazer a média de notas dos alunos da turma Y (que tem 25 alunos). Para isso, precisamos de um programa que execute um laço de repetição de 1 até N, onde N é um valor informado pelo usuário.
 
-\subsubsection*{Fluxograma para solução do problema~\ref{problema3}}
-A Figura~\ref{fig:fluxogramaproblema3} apresenta uma solução, na forma de fluxograma, para o problema~\ref{problema3}.
+\subsubsection*{Fluxograma para solução do problema~\ref{problema(while3)}}
+A Figura~\ref{fig:fluxogramaproblema3} apresenta uma solução, na forma de fluxograma, para o problema~\ref{problema(while3)}.
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[width=0.5\linewidth]{img/problema3.png}
-    \caption{Fluxograma representando a solução pra o problema~\ref{problema3}.}
+    \includegraphics[width=0.5\linewidth]{img/problemaWhile3.png}
+    \caption{Fluxograma representando a solução pra o problema~\ref{problema(while3)}.}
     \label{fig:fluxogramaproblema3}
   \end{center}
 \end{figure}
@@ -290,6 +290,116 @@ printf(" %f ",media)
 
 
 % ============================================ DO - WHILE ============================================ 
+\section{Laço Do-While/Do-Until}
+\label{sec:dowhile}
+
+\begin{center}
+  \emph{->-> O par de instruções do-while executa laços do tipo faça-enquanto <-<-}  
+\end{center}
+
+Nesta técnica executamos um conjunto de instrução enquanto uma determinada condição for verdadeira. O conjunto de instruções a ser repetido é executado ANTES do teste, sendo que este conjunto de instruções é executado pelo menos uma vez. 
+
+Na técnica anterior~(\ref{sec:while}) o conjunto de instruções é executado DEPOIS do teste, podendo ocorrer situações em que não ocorra nenhuma execução deste bloco.
+
+O diagrama apresentado na Figura~\ref{fig:laco-do-while}, mostra graficamente este tipo de repetição.
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.75\linewidth]{img/laco-do-while.png}
+    \caption{Fluxograma representando o funcionamento de um laço do tipo do-while.}
+    \label{fig:laco-do-while}
+  \end{center}
+\end{figure}
+
+\subsection{Problema~\ref{sec:problema(do-while1)}}
+\label{sec:problema(do-while1)}
+
+Escreva um algoritmo/programa que apresente na tela, a mensagem “continuar”, pelo menos uma vez, até que o valor -1 seja inserido no programa.
+
+\subsubsection*{Fluxograma de uma solução para o problema~\ref{sec:problema(do-while1)} }
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.4\linewidth]{img/problemaDoWhile1.png}
+    \caption{Fluxograma representando a solução para o problema~\ref{sec:problema(do-while1)}.}
+    \label{fig:problemaDoWhile1}
+  \end{center}
+\end{figure}
+
+O laço inicia mostrando a palavra $continuar$. O segundo passo a ser feito é a leitura de um valor do teclado. Por fim, o teste do laço, que verifica que foi digitado $-1$: Se o teste for falso, retorno para o inicio do laço; se o teste deu verdadeiro então o programa vai para o fim.
+
+
+\subsubsection*{Pseudocódigo}
+Um algoritmo em pseudocódigo, que soluciona o problema~\ref{sec:problema(do-while1)}.
+\begin{pseudocode}
+Inicio
+var parar;
+faca
+	mostrar("continuar");
+	parar = lerValor();
+enquanto (parar != -1)
+Fim
+\end{pseudocode}
+
+
+\subsubsection*{JavaScript}
+Um algoritmo em JavaScript, que soluciona o problema~\ref{sec:problema(do-while1)}.
+\begin{code}
+var parar;
+do{
+	print("continuar");
+	parar = prompt("-1 finalizar / outro valor para continuar");
+}
+while(parar != -1);
+\end{code}
+
+\subsubsection*{Octave}
+A linguagem Octave não dispõe de  um mecanismo faça-enquanto. Nesta linguagem utiliza-se um mecanismo chamado faça-até, executado pela instrução do-until. Na prática o que muda é apenas a forma com que o teste final é feito. 
+
+O laço se encerra quando a condição for verdadeira (no faça-enquanto o laço se encerra quando a condição for falsa). 
+
+Um algoritmo em Octave, que soluciona o problema~\ref{sec:problema(do-while1)} utilizando a técnica $do-until$.
+\begin{code}
+clear
+do
+  disp("Continuar....")
+  parar = input("-1 para finalizar: ")
+until(parar == -1)
+\end{code}
+
+
+\subsection{Problema~\ref{sec:problema(do-while2)}}
+\label{sec:problema(do-while2)}
+
+Usando a estrutura de laço do-while (ou do-until para Octave), criar um algoritmo/programa para apresentar os números ímpares de 1 até N, sendo N um valor estipulado pelo usuário.
+
+\subsubsection*{Fluxograma}
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.4\linewidth]{img/problemaDoWhile2.png}
+    \caption{Fluxograma representando a solução para o problema~\ref{sec:problema(do-while2)}.}
+    \label{fig:problema(do-while2)}
+  \end{center}
+\end{figure}
+
+\subsubsection*{Pseudocódigo}
+Um algoritmo em pseudocódigo, que soluciona o problema ??.
+\begin{pseudocode}
+\end{pseudocode}
+
+
+\subsubsection*{JavaScript}
+Um algoritmo em JavaScript, que soluciona o problema ??.
+\begin{code}
+\end{code}
+
+\subsubsection*{Octave}
+Um algoritmo em Octave, que soluciona o problema ??.
+\begin{code}
+\end{code}
+
+
+
+% ============================================ GENERICO ============================================ 
 \section{Tipo de laço}
 \label{sec:tipolaco}
 
@@ -299,7 +409,7 @@ printf(" %f ",media)
 \subsubsection*{Fluxograma}
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[width=0.5\linewidth]{img/problema2.png}
+    \includegraphics[width=0.5\linewidth]{img/problemaWhile2.png}
     \caption{Fluxograma representando a solução para o problema ???.}
     \label{fig:problema???}
   \end{center}
