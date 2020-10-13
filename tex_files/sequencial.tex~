@@ -1,0 +1,14 @@
+\chapter{Resolvendo problemas sequenciais}
+\label{seq}
+
+Um problema sequencial é aquele em que resolvemos sem precisar executar testes ou laços de repetição. Em outras palavras, o código é um bloco único.
+
+Neste capítulo vamos falar sobre os principais aspectos de 
+
+\section{Entrada de dados}
+
+
+
+\section{Problema~\ref{problema(while1)}}
+\label{problema(while1)}
+Escrever um algoritmo/programa para \emph{mostrar na tela os números de 1 até 10, usando repetição.}

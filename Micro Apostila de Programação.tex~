@@ -30,9 +30,9 @@
 
 \setcounter{tocdepth}{2}
 
-\title{Micro Apostila}
+\title{Micro Apostila de Programação com Javascript e Octave}
 \author{José de Figueiredo}
-\date{Agosto 2020}
+\date{\today}
 
 \begin{document}
 
