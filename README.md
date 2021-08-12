@@ -1,2 +1,2 @@
-# microapostilaprogjavascriptoctave
-Micro Apostila de Programação: com Javascript e Octave
+# microapostilajavascript
+Micro Apostila de Programação com Javascript
