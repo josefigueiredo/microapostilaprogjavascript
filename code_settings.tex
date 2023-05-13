@@ -1,16 +1,9 @@
-\documentclass[a4paper,12pt,oneside]{book}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-% pacote babel ou equivalent
-\usepackage[portuguese]{babel}
-\usepackage{graphicx}
-\usepackage{verbatim}
 \usepackage{setspace}
 \doublespacing
 
 \usepackage{color}
 \usepackage{listings}
+
 \lstloadlanguages{Matlab} %use listings with Matlab for Pseudocode
 \lstnewenvironment{pseudocode}[1][]
 {\lstset{language=Matlab,frame=leftline,basicstyle=\linespread{1.1}\scriptsize, keywordstyle=\color{blue},numbers=left,xleftmargin=.04\textwidth,#1}}
@@ -29,18 +22,3 @@
 }
 
 \setcounter{tocdepth}{2}
-
-\title{Micro Apostila}
-\author{José de Figueiredo}
-\date{Agosto 2020}
-
-\begin{document}
-
-\maketitle
-\tableofcontents
-
-\include{tex_files/intro}
-\include{tex_files/fluxos}
-\include{tex_files/lacos}
-
-\end{document}
