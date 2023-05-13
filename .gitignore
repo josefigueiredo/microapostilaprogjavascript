@@ -1,6 +1,10 @@
+*.gz
 *.aux
 *.fls
 *.log
 *.out
 *.toc
 *~
+*.fdb_latexmk
+MicroApostila_JavaScript/
+
