@@ -10,7 +10,8 @@
 
 \include{code_settings.tex}
 
-\title{Micro Apostila de Javascript}
+\title{Micro Apostila \\ 
+  \emph{Programação em Javascript} }
 \author{José de Figueiredo}
 
 \begin{document}
